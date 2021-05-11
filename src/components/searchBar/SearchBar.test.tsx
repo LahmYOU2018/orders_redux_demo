@@ -7,11 +7,13 @@ describe('SearchBar', () => {
   const label = 'Search';
   const value = 'Test Value';
   const testId = 'test-id';
+  const placeholder = 'Test placeholder';
   const onChangeSpy = jest.fn();
 
   const props = {
     label,
     value,
+    placeholder,
     onChange: onChangeSpy,
   };
 
@@ -30,9 +32,21 @@ describe('SearchBar', () => {
     expect(shallowComponent.find('label')).toHaveLength(0);
   });
 
+  test('should render placeholder', () => {
+    const mountedComponent = mount(<SearchBar {...props} />);
+    expect(mountedComponent.find('input').props().placeholder).toEqual(placeholder);
+  });
+
+  test('should not render placeholder', () => {
+    const mountedComponent = mount(<SearchBar {...props} />);
+    const updatedPlaceholder = 'updated placeholder';
+    mountedComponent.setProps({ placeholder: updatedPlaceholder });
+    expect(mountedComponent.find('input').props().placeholder).toEqual(updatedPlaceholder);
+  });
+
   test('should render input value', () => {
-    const shallowComponent = mount(<SearchBar {...props} />);
-    expect(shallowComponent.find('input').props().value).toEqual(value);
+    const mountedComponent = mount(<SearchBar {...props} />);
+    expect(mountedComponent.find('input').props().value).toEqual(value);
   });
 
   test('should render more props', () => {

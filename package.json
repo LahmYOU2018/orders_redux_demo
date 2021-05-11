@@ -32,11 +32,12 @@
     "lint:css": "stylelint './src/**/*.tsx'",
     "postinstall": "husky install",
     "cypress:open": "cypress open",
-    "coverage": "CI=true react-scripts test --coverage"
+    "coverage": "react-scripts test --coverage --watchAll=false"
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js|jsx|ts|tsx)}"
+      "src/components/**/*.{js,jsx,ts,tsx}",
+      "src/App.tsx"
     ]
   },
   "browserslist": {

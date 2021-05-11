@@ -12,7 +12,7 @@ export interface SearchBarProps {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const InputBase = styled.input`
+const InputRoot = styled.input`
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -29,7 +29,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({className, label, value, pl
   return (
     <>
       {label && <label htmlFor="searchOrder">{label}</label>}
-      <InputBase id="searchOrder" className={className} value={value} placeholder={placeholder} {...props} ></InputBase>
+      <InputRoot id="searchOrder" className={className} value={value} placeholder={placeholder} {...props} />
     </>
   );
 };
