@@ -1,6 +1,6 @@
 /** @format */
 
-const DEFAULT_STYLE = {
+export const DEFAULT_STYLE = {
   color: {
     primary: '#006DFF',
     secondary: '#8E00FF',
@@ -11,4 +11,5 @@ const DEFAULT_STYLE = {
   },
 };
 
-export default DEFAULT_STYLE;
+export const TABLE_HEADERS = ['Customer', 'Address', 'Product', 'Price'];
+export const VALUES_TO_DISPLAY = ['customer', 'destination', 'item', 'price'];

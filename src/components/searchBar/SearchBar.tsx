@@ -2,7 +2,7 @@
 
 import React, {ChangeEvent} from 'react';
 import styled from 'styled-components';
-import DEFAULT_STYLE from '../../utils/common';
+import {DEFAULT_STYLE} from '../../utils/common';
 
 export interface SearchBarProps {
   className?: string;
