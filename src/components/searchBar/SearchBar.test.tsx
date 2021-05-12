@@ -22,8 +22,8 @@ describe('SearchBar', () => {
   });
 
   test('should render label', () => {
-    const shallowComponent = shallow(<SearchBar {...props} />);
-    expect(shallowComponent.find('label').text()).toEqual(label);
+    const mountedComponent = mount(<SearchBar {...props} />);
+    expect(mountedComponent.find('label').text()).toEqual(label);
   });
 
   test('should not render label', () => {

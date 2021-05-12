@@ -2,7 +2,6 @@
 
 import React, {ChangeEvent} from 'react';
 import styled from 'styled-components';
-import {DEFAULT_STYLE} from '../../utils/common';
 
 export interface SearchBarProps {
   className?: string;
@@ -12,23 +11,25 @@ export interface SearchBarProps {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
+const Label = styled.label`
+  font-size: 12px;
+`;
+
 const InputRoot = styled.input`
-  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
   font-style: normal;
   font-weight: normal;
-  font-size: 15px;
-  line-height: 20px;
-  color: ${DEFAULT_STYLE.color.dark};
-  background-color: ${DEFAULT_STYLE.color.light};
+  color: #000000;
+  background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 8px;
-  padding: 8px 24px;
+  padding: 8px;
 `;
 
 export const SearchBar: React.FC<SearchBarProps> = ({className, label, value, placeholder, ...props}) => {
   return (
     <>
-      {label && <label htmlFor="searchOrder">{label}</label>}
+      {label && <Label htmlFor="searchOrder">{label}</Label>}
       <InputRoot id="searchOrder" className={className} value={value} placeholder={placeholder} {...props} />
     </>
   );
