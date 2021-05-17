@@ -11,11 +11,20 @@ export interface SearchBarProps {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
+const SearchBarLayout = styled.div`
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+`;
+
 const Label = styled.label`
   font-size: 12px;
+  margin-right: 8px;
 `;
 
 const InputRoot = styled.input`
+  min-width: 50%;
   font-size: 12px;
   font-style: normal;
   font-weight: normal;
@@ -28,9 +37,9 @@ const InputRoot = styled.input`
 
 export const SearchBar: React.FC<SearchBarProps> = ({className, label, value, placeholder, ...props}) => {
   return (
-    <>
+    <SearchBarLayout>
       {label && <Label htmlFor="searchOrder">{label}</Label>}
       <InputRoot id="searchOrder" className={className} value={value} placeholder={placeholder} {...props} />
-    </>
+    </SearchBarLayout>
   );
 };

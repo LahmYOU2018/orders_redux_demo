@@ -1,11 +1,22 @@
-/** @format */
+import { useState, useEffect } from "react";
+import socketIOClient from "socket.io-client";
+import {ENDPOINT} from './utils/common';
+import { OrderPage } from "./container/OrderPage";
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-const App = () => {
+function App() {
+  const [orders, setOrders] = useState([]);
+
+  useEffect(() => {
+    const socket = socketIOClient(ENDPOINT);
+    socket.on("order_event", data => {
+      setOrders(data);
+    });
+  }, []);
 
   return (
-    <>Demo App</>
+    <OrderPage orders={orders}/>
   );
-};
+}
 
 export default App;

@@ -4,7 +4,7 @@ import React from 'react';
 import {createGlobalStyle} from 'styled-components';
 import {TABLE_HEADERS, VALUES_TO_DISPLAY} from '../../utils/common';
 
-interface OrderProps {
+export interface OrderProps {
   customer?: string;
   destination?: string;
   item?: string;
@@ -31,8 +31,8 @@ const GlobalStyle = createGlobalStyle`
     th, td, tr {
       padding: 5px;
     }
-    th {
-      text-align: left;
+    thead {
+      text-align: center;
     }
   }
 `;
