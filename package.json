@@ -38,6 +38,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/components/**/*.{js,jsx,ts,tsx}",
+      "src/containers/**/*.{js,jsx,ts,tsx}",
       "src/App.tsx"
     ]
   },

@@ -17,11 +17,13 @@ const SearchBarLayout = styled.div`
   display: flex;
   align-items: center;
 `;
+SearchBarLayout.displayName = 'SearchBarLayout';
 
 const Label = styled.label`
   font-size: 12px;
   margin-right: 8px;
 `;
+Label.displayName = 'Label';
 
 const InputRoot = styled.input`
   min-width: 50%;
@@ -34,6 +36,7 @@ const InputRoot = styled.input`
   border-radius: 8px;
   padding: 8px;
 `;
+InputRoot.displayName = 'InputRoot';
 
 export const SearchBar: React.FC<SearchBarProps> = ({className, label, value, placeholder, ...props}) => {
   return (

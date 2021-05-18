@@ -29,7 +29,8 @@ const GlobalStyle = createGlobalStyle`
       border-collapse: collapse;
     }
     th, td, tr {
-      padding: 8px;
+      padding: 8px 4px;
+      min-width: 40px;
     }
     thead {
       text-align: center;

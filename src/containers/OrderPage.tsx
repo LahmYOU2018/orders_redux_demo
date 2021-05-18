@@ -6,10 +6,15 @@ import {OrderTable, OrderProps} from '../components/orderTable/OrderTable';
 import {SearchBar} from '../components/searchBar/SearchBar';
 
 const OrderPageLayout = styled.main`
-  width: 80%;
-  margin: 64px auto;
+  width: 90%;
+  margin: 32px auto;
 `;
 OrderPageLayout.displayName = 'OrderPageLayout';
+
+const OrderPageHeader = styled.h1`
+  text-align: center;
+`;
+OrderPageHeader.displayName = 'OrderPageHeader';
 
 export interface OrderPageProps {
   orders?: OrderProps[];
@@ -22,9 +27,10 @@ export const OrderPage: React.FC<OrderPageProps> = ({orders = []}) => {
 
   return (
     <OrderPageLayout role="main">
+      <OrderPageHeader>Order Demo</OrderPageHeader> 
       <SearchBar
-        label="Search order: "
-        placeholder="type to search"
+        label="Search by price: $"
+        placeholder="enter the mount"
         onChange={handleSearch} 
       />
       <OrderTable orderList={orders} />

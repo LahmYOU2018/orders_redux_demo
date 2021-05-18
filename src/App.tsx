@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import socketIOClient from "socket.io-client";
 import {ENDPOINT} from './utils/common';
-import { OrderPage } from "./container/OrderPage";
+import { OrderPage } from "./containers/OrderPage";
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function App() {
