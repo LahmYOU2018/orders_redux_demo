@@ -9,29 +9,31 @@ export default {
 };
 
 const orderList = [
-    {
-        "customer": "Carla Garner",
-        "destination": "61109 Alan Motorway, North Corey, CA 92789",
-        "item": "Caesar salad",
-        "price": 4692
-    },
-    {
-        "customer": "Carla Garner",
-        "destination": "61109 Alan Motorway, North Corey, CA 92789",
-        "item": "Caesar salad",
-        "price": 4692
-    }
+  {
+    customer: 'Amanda Roberts',
+    destination: '759 Thompson Union, East Natalie, CA 96079',
+    event_name: 'CREATED',
+    id: '188af307',
+    item: 'Chicken kabob',
+    price: 8850,
+    sent_at_second: 297,
+  },
+  {
+    customer: 'Amanda Roberts',
+    destination: '759 Thompson Union, East Natalie, CA 96079',
+    event_name: 'COOKED',
+    id: '188af307',
+    item: 'Chicken kabob',
+    price: 8850,
+    sent_at_second: 307,
+  },
 ];
 
-const style = {'border-collapse': 'collapse'}
-
 const Template: Story<TableProps> = args => {
-  return (
-    <OrderTable {...args} />
-  );
+  return <OrderTable {...args} />;
 };
 
 export const Default = Template.bind({});
 Default.args = {
-  orderList
+  orderList,
 };
