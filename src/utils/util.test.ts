@@ -1,5 +1,3 @@
-/** @format */
-
 import {getOrdersHash} from './util';
 
 describe('Tab Panel Content List', () => {
