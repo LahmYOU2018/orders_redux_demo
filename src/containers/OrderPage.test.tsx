@@ -31,6 +31,8 @@ describe('Tab Panel Content List', () => {
     const shallowComponent = shallow(<OrderPage />);
     expect(shallowComponent.find('OrderPageLayout')).toHaveLength(1);
     expect(shallowComponent.find('OrderPageHeader')).toHaveLength(1);
+    expect(shallowComponent.find('SearchHeader')).toHaveLength(1);
+    expect(shallowComponent.find('OrderCount')).toHaveLength(1);
     expect(shallowComponent.find(SearchBar)).toHaveLength(1);
     expect(shallowComponent.find(OrderTable)).toHaveLength(1);
   });
@@ -39,6 +41,8 @@ describe('Tab Panel Content List', () => {
     const shallowComponent = shallow(<OrderPage orders={orders} />);
     expect(shallowComponent.find('OrderPageLayout')).toHaveLength(1);
     expect(shallowComponent.find('OrderPageHeader')).toHaveLength(1);
+    expect(shallowComponent.find('SearchHeader')).toHaveLength(1);
+    expect(shallowComponent.find('OrderCount')).toHaveLength(1);
     expect(shallowComponent.find(SearchBar)).toHaveLength(1);
     expect(shallowComponent.find(OrderTable)).toHaveLength(1);
   });

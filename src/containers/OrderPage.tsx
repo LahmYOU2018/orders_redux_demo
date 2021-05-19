@@ -18,6 +18,18 @@ const OrderPageHeader = styled.h1`
 `;
 OrderPageHeader.displayName = 'OrderPageHeader';
 
+const OrderCount = styled.p`
+  font-size: 12px;
+`;
+OrderCount.displayName = 'OrderCount';
+
+const SearchHeader = styled.div`
+  display: flex;
+  margin: 20px auto;
+  justify-content: space-between;
+`;
+SearchHeader.displayName = 'SearchHeader';
+
 export interface OrderPageProps {
   orders?: OrderProps[];
 }
@@ -36,7 +48,10 @@ export const OrderPage: React.FC<OrderPageProps> = ({orders = []}) => {
   return (
     <OrderPageLayout role="main">
       <OrderPageHeader>Order Demo</OrderPageHeader>
-      <SearchBar label="Search by price: $" placeholder="enter the mount" onChange={handleSearch} />
+      <SearchHeader>
+        <SearchBar label="Search by price: $" placeholder="enter the mount" onChange={handleSearch} />
+        <OrderCount>Total Count: {filteredOrders.length}</OrderCount>
+      </SearchHeader>
       <OrderTable orderList={filteredOrders} />
     </OrderPageLayout>
   );

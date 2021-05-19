@@ -12,8 +12,6 @@ export interface SearchBarProps {
 }
 
 const SearchBarLayout = styled.div`
-  width: 100%;
-  margin: 20px auto;
   display: flex;
   align-items: center;
 `;
