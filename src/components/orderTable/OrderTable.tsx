@@ -4,6 +4,7 @@ import React from 'react';
 import {createGlobalStyle} from 'styled-components';
 import {TABLE_HEADERS} from '../../utils/common';
 import {OrderProps} from '../../dataModel/Order';
+import {getPriceStr} from '../../utils/util';
 
 export interface TableProps {
   orderList?: OrderProps[];
@@ -44,14 +45,14 @@ export const OrderTable: React.FC<TableProps> = ({orderList = []}) => {
           </tr>
         </thead>
         <tbody>
-          {orderList.map((order, index) => (
+          {orderList.map((order: OrderProps, index) => (
 
             <tr key={index}>
               <td>{order['id']}</td>
               <td>{order['customer']}</td>
               <td>{order['destination']}</td>
               <td>{order['item']}</td>
-              <td>{order['price']}</td>
+              <td>{getPriceStr(order['price'])}</td>
               <td>{order['event_name']}</td>
             </tr>
           ))}

@@ -9,3 +9,8 @@ export const getOrdersHash = (() => {
     }, hash);
   };
 })();
+
+
+export const getPriceStr = (price: number):string => {
+  return `$ ${price/100}`;
+};
