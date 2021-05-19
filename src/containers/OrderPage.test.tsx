@@ -34,6 +34,7 @@ describe('Tab Panel Content List', () => {
     expect(shallowComponent.find(SearchBar)).toHaveLength(1);
     expect(shallowComponent.find(OrderTable)).toHaveLength(1);
   });
+  
   test('should render header, search bar and order table when there are orders', () => {
     const shallowComponent = shallow(<OrderPage orders={orders} />);
     expect(shallowComponent.find('OrderPageLayout')).toHaveLength(1);

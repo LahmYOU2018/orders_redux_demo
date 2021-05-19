@@ -2,17 +2,8 @@
 
 import React from 'react';
 import {createGlobalStyle} from 'styled-components';
-import {TABLE_HEADERS, VALUES_TO_DISPLAY} from '../../utils/common';
-
-export interface OrderProps {
-  id: string;
-  customer: string;
-  destination: string;
-  item: string;
-  price: number;
-  event_name: string;
-  sent_at_second?: number;
-}
+import {TABLE_HEADERS} from '../../utils/common';
+import {OrderProps} from '../../dataModel/Order';
 
 export interface TableProps {
   orderList?: OrderProps[];
@@ -54,10 +45,14 @@ export const OrderTable: React.FC<TableProps> = ({orderList = []}) => {
         </thead>
         <tbody>
           {orderList.map((order, index) => (
+
             <tr key={index}>
-              {VALUES_TO_DISPLAY.map((value, index) => (
-                <td key={index}>{value === 'price' ? `$ ${order.price/100}` : order[value as keyof OrderProps] }</td>
-              ))}
+              <td>{order['id']}</td>
+              <td>{order['customer']}</td>
+              <td>{order['destination']}</td>
+              <td>{order['item']}</td>
+              <td>{order['price']}</td>
+              <td>{order['event_name']}</td>
             </tr>
           ))}
         </tbody>

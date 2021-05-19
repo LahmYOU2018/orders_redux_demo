@@ -2,8 +2,9 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import {OrderTable, OrderProps} from '../components/orderTable/OrderTable';
+import {OrderTable} from '../components/orderTable/OrderTable';
 import {SearchBar} from '../components/searchBar/SearchBar';
+import {OrderProps} from '../dataModel/Order';
 
 const OrderPageLayout = styled.main`
   width: 90%;
