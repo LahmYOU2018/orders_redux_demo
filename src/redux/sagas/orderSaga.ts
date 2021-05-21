@@ -6,11 +6,10 @@ import {put, call, take, takeEvery, select} from 'redux-saga/effects';
 import {getOrdersHash} from '../../utils/util';
 import socketIOClient from 'socket.io-client';
 import {ENDPOINT} from '../../utils/common';
-import {orderHash} from './selectors';
 
 // eslint-disable-next-line require-yield
 function* createEventChannel(socket) {
-  const currentOrderHash = yield select(orderHash);
+  const currentOrderHash = yield select((state) => state.orderStore.orderHash);
 
   return eventChannel(emit => {
     socket.on('order_event', data => {

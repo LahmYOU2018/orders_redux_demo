@@ -44,7 +44,10 @@
     "collectCoverageFrom": [
       "src/components/**/*.{js,jsx,ts,tsx}",
       "src/containers/**/*.{js,jsx,ts,tsx}",
-      "src/utils/**/*.{js,jsx,ts,tsx}"
+      "src/utils/**/*.{js,jsx,ts,tsx}",
+      "src/redux/**/*.{js,jsx,ts,tsx}",
+      "!src/redux/**/root*.{js,jsx,ts,tsx}",
+      "!src/redux/**/index*.{js,jsx,ts,tsx}"
     ]
   },
   "browserslist": {
