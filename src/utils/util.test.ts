@@ -5,6 +5,7 @@ import {getOrdersHash, getPriceStr} from './util';
 describe('util', () => {
   describe('getOrdersHash', () => {
     it('return object of orders', () => {
+      const orderHash = {};
       const orderList = [
         {
           customer: 'Amanda Roberts',
@@ -47,12 +48,33 @@ describe('util', () => {
         },
       };
 
-      const actualResult = getOrdersHash(orderList);
+      const actualResult = getOrdersHash(orderHash, orderList);
 
       expect(expectedResult).toEqual(actualResult);
     });
 
     it('return updated object of orders', () => {
+      const orderHash = {
+        '188af307': {
+          customer: 'Amanda Roberts',
+          destination: '759 Thompson Union, East Natalie, CA 96079',
+          event_name: 'CREATED',
+          id: '188af307',
+          item: 'Chicken kabob',
+          price: 8850,
+          sent_at_second: 297,
+        },
+        b4159e25: {
+          customer: 'Russell Lopez',
+          destination: '015 Vaughan Ports, New Rebeccamouth, CA 90657',
+          event_name: 'CREATED',
+          id: 'b4159e25',
+          item: 'Pesto pasta',
+          price: 2782,
+          sent_at_second: 302,
+        },
+      };
+      
       const orderList = [
         {
           customer: 'Amanda Roberts',
@@ -104,7 +126,7 @@ describe('util', () => {
         },
       };
 
-      const actualResult = getOrdersHash(orderList);
+      const actualResult = getOrdersHash(orderHash, orderList);
 
       expect(expectedResult).toEqual(actualResult);
     });

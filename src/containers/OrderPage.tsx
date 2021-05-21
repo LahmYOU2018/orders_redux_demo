@@ -39,7 +39,7 @@ export const OrderPage: React.FC<OrderPageProps> = ({orders = []}) => {
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.currentTarget.value;
-    const valueToSearch = !isNaN(parseFloat(value)) ? Math.floor(parseFloat(value) * 100) : null;
+    const valueToSearch = !isNaN(parseFloat(value)) ? Math.round(parseFloat(value) * 100) : null;
     setSearchValue(valueToSearch);
   };
 

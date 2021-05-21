@@ -1,15 +1,16 @@
+/** @format */
+
 import {OrderProps} from '../dataModel/Order';
+import {OrderHashProps} from '../dataModel/OrderHash';
 
-export const getOrdersHash = (() => {
-  const hash = {};
-  return (orders: OrderProps[]) => {
-    return orders.reduce(function (acc, obj) {
-      acc[obj['id']] = obj;
-      return acc;
-    }, hash);
-  };
-})();
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export const getOrdersHash = (orderHash: OrderHashProps, orders: OrderProps[]) => {
+  return orders.reduce(function (acc, obj) {
+    acc[obj['id']] = obj;
+    return acc;
+  }, orderHash);
+};
 
-export const getPriceStr = (price: number):string => {
-  return `$ ${price/100}`;
+export const getPriceStr = (price: number): string => {
+  return `$ ${price / 100}`;
 };
