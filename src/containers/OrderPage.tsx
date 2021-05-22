@@ -35,12 +35,11 @@ export interface OrderPageProps {
 }
 
 export const OrderPage: React.FC<OrderPageProps> = ({orders = []}) => {
-  const [searchValue, setSearchValue] = useState<number | null>(null);
+  const [searchValue, setSearchValue] = useState<string>('');
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.currentTarget.value;
-    const valueToSearch = !isNaN(parseFloat(value)) ? Math.round(parseFloat(value) * 100) : null;
-    setSearchValue(valueToSearch);
+    const value = e.target.value;
+    setSearchValue(value);
   };
 
   const filteredOrders = useFilterOrders(orders, searchValue);
@@ -49,7 +48,12 @@ export const OrderPage: React.FC<OrderPageProps> = ({orders = []}) => {
     <OrderPageLayout role="main">
       <OrderPageHeader>Order Demo</OrderPageHeader>
       <SearchHeader>
-        <SearchBar label="Search by price: $" placeholder="enter the mount" onChange={handleSearch} />
+        <SearchBar
+          label="Search by price: $"
+          value={searchValue}
+          placeholder="enter the mount"
+          onChange={handleSearch}
+        />
         <OrderCount>Total Count: {filteredOrders.length}</OrderCount>
       </SearchHeader>
       <OrderTable orderList={filteredOrders} />

@@ -36,11 +36,19 @@ const InputRoot = styled.input`
 `;
 InputRoot.displayName = 'InputRoot';
 
-export const SearchBar: React.FC<SearchBarProps> = ({className, label, value, placeholder, ...props}) => {
+export const SearchBar: React.FC<SearchBarProps> = ({className, label, value, placeholder, onChange, ...props}) => {
   return (
     <SearchBarLayout>
-      {label && <Label htmlFor="searchOrder">{label}</Label>}
-      <InputRoot id="searchOrder" className={className} value={value} placeholder={placeholder} {...props} />
+      {label && <Label htmlFor="search-order-input">{label}</Label>}
+      <InputRoot
+        id="search-order-input"
+        type="text"
+        className={className}
+        value={value}
+        placeholder={placeholder}
+        onChange={onChange}
+        {...props}
+      />
     </SearchBarLayout>
   );
 };
