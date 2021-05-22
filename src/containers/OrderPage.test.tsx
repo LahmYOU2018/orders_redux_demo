@@ -58,7 +58,6 @@ describe('Order Page', () => {
     searchInput.simulate('focus');
     searchInput.simulate('change', event);
     shallowComponent.update();
-    console.log(shallowComponent.debug());
     expect(shallowComponent.find(SearchBar).prop('value')).toEqual("88.50");
   });
 });
