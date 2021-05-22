@@ -1,6 +1,6 @@
 /** @format */
 
-import {FETCH_ORDER_REQUEST, FETCH_ORDER_SUCCESS, FETCH_ORDER_FAILURE, INVALID_TYPE} from '../actions/orderTypes';
+import { FETCH_ORDER_REQUEST, FETCH_ORDER_SUCCESS, FETCH_ORDER_FAILURE, INVALID_TYPE } from '../actions/orderTypes';
 import orderReducer from './orderReducer';
 
 const initialState = {
@@ -41,7 +41,8 @@ describe('Order Reducer', () => {
         item: 'Caesar salad',
         price: 4692,
         sent_at_second: 6,
-      }};
+      },
+    };
     const expected = {
       pending: false,
       orderHash,

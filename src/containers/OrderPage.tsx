@@ -1,11 +1,11 @@
 /** @format */
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import {OrderTable} from '../components/orderTable/OrderTable';
-import {SearchBar} from '../components/searchBar/SearchBar';
-import {OrderProps} from '../dataModel/Order';
-import {useFilterOrders} from '../customHooks/useFilterOrders';
+import { OrderTable } from '../components/orderTable/OrderTable';
+import { SearchBar } from '../components/searchBar/SearchBar';
+import { OrderProps } from '../dataModel/Order';
+import { useFilterOrders } from '../customHooks/useFilterOrders';
 
 const OrderPageLayout = styled.main`
   width: 90%;
@@ -34,7 +34,7 @@ export interface OrderPageProps {
   orders?: OrderProps[];
 }
 
-export const OrderPage: React.FC<OrderPageProps> = ({orders = []}) => {
+export const OrderPage: React.FC<OrderPageProps> = ({ orders = [] }) => {
   const [searchValue, setSearchValue] = useState<string>('');
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {

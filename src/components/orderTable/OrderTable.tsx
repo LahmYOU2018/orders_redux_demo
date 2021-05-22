@@ -1,10 +1,10 @@
 /** @format */
 
 import React from 'react';
-import {createGlobalStyle} from 'styled-components';
-import {TABLE_HEADERS} from '../../utils/common';
-import {OrderProps} from '../../dataModel/Order';
-import {getPriceStr} from '../../utils/util';
+import { createGlobalStyle } from 'styled-components';
+import { TABLE_HEADERS } from '../../utils/common';
+import { OrderProps } from '../../dataModel/Order';
+import { getPriceStr } from '../../utils/util';
 
 export interface TableProps {
   orderList?: OrderProps[];
@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const OrderTable: React.FC<TableProps> = ({orderList = []}) => {
+export const OrderTable: React.FC<TableProps> = ({ orderList = [] }) => {
   return (
     <>
       <GlobalStyle />
@@ -46,7 +46,6 @@ export const OrderTable: React.FC<TableProps> = ({orderList = []}) => {
         </thead>
         <tbody>
           {orderList.map((order: OrderProps, index) => (
-
             <tr key={index}>
               <td>{order['id']}</td>
               <td>{order['customer']}</td>

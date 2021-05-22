@@ -1,5 +1,7 @@
-import {OrderProps} from './Order';
+/** @format */
+
+import { OrderProps } from './Order';
 
 export interface OrderHashProps {
-  [key: string]: OrderProps
-};
+  [key: string]: OrderProps;
+}

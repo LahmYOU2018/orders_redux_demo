@@ -46,6 +46,7 @@
       "src/containers/**/*.{js,jsx,ts,tsx}",
       "src/utils/**/*.{js,jsx,ts,tsx}",
       "src/redux/**/*.{js,jsx,ts,tsx}",
+      "src/customHooks/**/*.{js,jsx,ts,tsx}",
       "!src/redux/**/root*.{js,jsx,ts,tsx}",
       "!src/redux/**/index*.{js,jsx,ts,tsx}"
     ]
@@ -71,6 +72,7 @@
     "@storybook/node-logger": "^6.1.21",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.1.21",
+    "@testing-library/react-hooks": "^6.0.0",
     "@types/enzyme": "^3.10.8",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/react": "^17.0.3",

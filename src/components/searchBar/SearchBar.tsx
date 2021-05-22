@@ -1,6 +1,6 @@
 /** @format */
 
-import React, {ChangeEvent} from 'react';
+import React, { ChangeEvent } from 'react';
 import styled from 'styled-components';
 
 export interface SearchBarProps {
@@ -36,7 +36,7 @@ const InputRoot = styled.input`
 `;
 InputRoot.displayName = 'InputRoot';
 
-export const SearchBar: React.FC<SearchBarProps> = ({className, label, value, placeholder, onChange, ...props}) => {
+export const SearchBar: React.FC<SearchBarProps> = ({ className, label, value, placeholder, onChange, ...props }) => {
   return (
     <SearchBarLayout>
       {label && <Label htmlFor="search-order-input">{label}</Label>}

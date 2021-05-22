@@ -1,6 +1,8 @@
-import { all, fork } from "redux-saga/effects";
+/** @format */
 
-import orderSaga from "./orderSaga";
+import { all, fork } from 'redux-saga/effects';
+
+import orderSaga from './orderSaga';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function* rootSaga() {

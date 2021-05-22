@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
-import {OrderProps} from '../dataModel/Order';
+/** @format */
 
-export const useFilterOrders = (orders: OrderProps[], searchValue: string) : OrderProps[] => {
+import { useState, useEffect } from 'react';
+import { OrderProps } from '../dataModel/Order';
+
+export const useFilterOrders = (orders: OrderProps[], searchValue: string): OrderProps[] => {
   const [filteredOrders, setfilteredOrders] = useState(orders);
 
   useEffect(() => {

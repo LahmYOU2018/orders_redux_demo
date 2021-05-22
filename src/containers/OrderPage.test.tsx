@@ -1,9 +1,9 @@
 /** @format */
 
-import {shallow} from 'enzyme';
-import {OrderPage} from './OrderPage';
-import {SearchBar} from '../components/searchBar/SearchBar';
-import {OrderTable} from '../components/orderTable/OrderTable';
+import { shallow } from 'enzyme';
+import { OrderPage } from './OrderPage';
+import { SearchBar } from '../components/searchBar/SearchBar';
+import { OrderTable } from '../components/orderTable/OrderTable';
 
 describe('Order Page', () => {
   const orders = [
@@ -17,14 +17,14 @@ describe('Order Page', () => {
       sent_at_second: 297,
     },
     {
-      "customer": "Carla Garner",
-      "destination": "61109 Alan Motorway, North Corey, CA 92789",
-      "event_name": "COOKED",
-      "id": "d0791ce1",
-      "item": "Caesar salad",
-      "price": 4692,
-      "sent_at_second": 13
-    }
+      customer: 'Carla Garner',
+      destination: '61109 Alan Motorway, North Corey, CA 92789',
+      event_name: 'COOKED',
+      id: 'd0791ce1',
+      item: 'Caesar salad',
+      price: 4692,
+      sent_at_second: 13,
+    },
   ];
 
   test('should renderheader, search bar and order table if there is no order', () => {
@@ -49,15 +49,15 @@ describe('Order Page', () => {
 
   test('should render and update value for search order input', () => {
     const event = {
-      target: { value: "88.50" }
+      target: { value: '88.50' },
     };
-    
+
     const shallowComponent = shallow(<OrderPage orders={orders} />);
     const searchInput = shallowComponent.find(SearchBar);
     expect(searchInput.prop('value')).toEqual('');
     searchInput.simulate('focus');
     searchInput.simulate('change', event);
     shallowComponent.update();
-    expect(shallowComponent.find(SearchBar).prop('value')).toEqual("88.50");
+    expect(shallowComponent.find(SearchBar).prop('value')).toEqual('88.50');
   });
 });

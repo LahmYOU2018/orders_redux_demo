@@ -1,4 +1,6 @@
-import {OrderHashProps} from './OrderHash';
+/** @format */
+
+import { OrderHashProps } from './OrderHash';
 import { ErrorStoreState } from './ErrorStoreState';
 
 export interface OrderStoreState {

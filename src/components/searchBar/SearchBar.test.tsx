@@ -1,7 +1,7 @@
 /** @format */
 
-import {mount, shallow} from 'enzyme';
-import {SearchBar} from './SearchBar';
+import { mount, shallow } from 'enzyme';
+import { SearchBar } from './SearchBar';
 
 describe('SearchBar', () => {
   const label = 'Search';
@@ -57,7 +57,7 @@ describe('SearchBar', () => {
   test('should invoke onChange function', () => {
     const mountedComponent = mount(<SearchBar {...props} />);
     const event = {
-      target: { value: 'the-value' }
+      target: { value: 'the-value' },
     };
 
     mountedComponent.find('input').simulate('change', event);

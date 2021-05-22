@@ -1,8 +1,8 @@
 /** @format */
 
-import {FETCH_ORDER_REQUEST, FETCH_ORDER_SUCCESS, FETCH_ORDER_FAILURE} from '../actions/orderTypes';
-import {OrderActions} from '../actions/orderTypes';
-import {OrderStoreState} from '../../dataModel/OrderStoreState';
+import { FETCH_ORDER_REQUEST, FETCH_ORDER_SUCCESS, FETCH_ORDER_FAILURE } from '../actions/orderTypes';
+import { OrderActions } from '../actions/orderTypes';
+import { OrderStoreState } from '../../dataModel/OrderStoreState';
 
 const initialState: OrderStoreState = {
   pending: false,

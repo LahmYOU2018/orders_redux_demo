@@ -1,5 +1,7 @@
-import {OrderHashProps} from '../../dataModel/OrderHash';
-import {ErrorStoreState} from '../../dataModel/ErrorStoreState';
+/** @format */
+
+import { OrderHashProps } from '../../dataModel/OrderHash';
+import { ErrorStoreState } from '../../dataModel/ErrorStoreState';
 
 export const FETCH_ORDER_REQUEST = 'FETCH_ORDER_REQUEST';
 export const FETCH_ORDER_SUCCESS = 'FETCH_ORDER_SUCCESS';
@@ -24,8 +26,4 @@ export type FetchOrderFailure = {
   payload: ErrorStoreState;
 };
 
-export type OrderActions =
-  | FetchOrderRequest
-  | FetchOrderSuccess
-  | FetchOrderFailure
-  | InvalidRequest;
+export type OrderActions = FetchOrderRequest | FetchOrderSuccess | FetchOrderFailure | InvalidRequest;

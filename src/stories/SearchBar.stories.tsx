@@ -1,32 +1,32 @@
-import {Story} from '@storybook/react';
-import {SearchBar, SearchBarProps} from '../components/searchBar/SearchBar';
+/** @format */
+
+import { Story } from '@storybook/react';
+import { SearchBar, SearchBarProps } from '../components/searchBar/SearchBar';
 
 export default {
   title: 'Components/SearchBar',
   component: SearchBar,
   argTypes: {
-    className :{
+    className: {
       table: {
-        disable: true
-      }
+        disable: true,
+      },
     },
     value: {
       table: {
-        disable: true
-      }
+        disable: true,
+      },
     },
     onChange: {
       table: {
-        disable: true
-      }
-    }
-  }
+        disable: true,
+      },
+    },
+  },
 };
 
 const Template: Story<SearchBarProps> = args => {
-  return (
-    <SearchBar {...args} />
-  );
+  return <SearchBar {...args} />;
 };
 
 const handleChange = () => console.log('input value changed');

@@ -1,6 +1,8 @@
-import { combineReducers } from "redux";
+/** @format */
 
-import orderReducer from "./orderReducer";
+import { combineReducers } from 'redux';
+
+import orderReducer from './orderReducer';
 
 const rootReducer = combineReducers({
   orderStore: orderReducer,

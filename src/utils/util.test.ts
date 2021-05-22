@@ -1,6 +1,6 @@
 /** @format */
 
-import {getOrdersHash, getPriceStr} from './util';
+import { getOrdersHash, getPriceStr } from './util';
 
 describe('util', () => {
   describe('getOrdersHash', () => {
@@ -74,7 +74,7 @@ describe('util', () => {
           sent_at_second: 302,
         },
       };
-      
+
       const orderList = [
         {
           customer: 'Amanda Roberts',

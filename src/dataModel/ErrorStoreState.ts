@@ -1,4 +1,6 @@
+/** @format */
+
 export interface ErrorStoreState {
-  errorCode?: string,
-  errorMessage?: string
+  errorCode?: string;
+  errorMessage?: string;
 }

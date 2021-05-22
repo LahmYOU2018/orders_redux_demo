@@ -1,7 +1,7 @@
 /** @format */
 
-import {Story} from '@storybook/react';
-import {OrderTable, TableProps} from '../components/orderTable/OrderTable';
+import { Story } from '@storybook/react';
+import { OrderTable, TableProps } from '../components/orderTable/OrderTable';
 
 export default {
   title: 'Components/Order Table',

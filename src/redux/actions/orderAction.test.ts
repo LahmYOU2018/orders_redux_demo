@@ -1,7 +1,7 @@
 /** @format */
 
-import {fetchOrderRequest, fetchOrderSuccess, fetchOrderFailure} from './orderActions';
-import {FETCH_ORDER_REQUEST, FETCH_ORDER_SUCCESS, FETCH_ORDER_FAILURE} from './orderTypes';
+import { fetchOrderRequest, fetchOrderSuccess, fetchOrderFailure } from './orderActions';
+import { FETCH_ORDER_REQUEST, FETCH_ORDER_SUCCESS, FETCH_ORDER_FAILURE } from './orderTypes';
 
 describe('Order Actions', () => {
   it('should create FETCH_ORDER_REQUEST action', () => {
