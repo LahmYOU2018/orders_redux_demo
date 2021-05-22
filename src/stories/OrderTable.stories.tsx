@@ -19,14 +19,14 @@ const orderList = [
     sent_at_second: 297,
   },
   {
-    customer: 'Amanda Roberts',
-    destination: '759 Thompson Union, East Natalie, CA 96079',
+    customer: 'Carla Garner',
+    destination: '61109 Alan Motorway, North Corey, CA 92789',
     event_name: 'COOKED',
-    id: '188af307',
-    item: 'Chicken kabob',
-    price: 8850,
-    sent_at_second: 307,
-  },
+    id: 'd0791ce1',
+    item: 'Caesar salad',
+    price: 4692,
+    sent_at_second: 13,
+  }
 ];
 
 const Template: Story<TableProps> = args => {
